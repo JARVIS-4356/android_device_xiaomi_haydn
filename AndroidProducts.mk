@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/genesis_haydn.mk
+    $(LOCAL_DIR)/clover_haydn.mk

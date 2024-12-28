@@ -11,20 +11,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from haydn device
 $(call inherit-product, device/xiaomi/haydn/device.mk)
 
-# Inherit some common GenesisOS stuff.
-$(call inherit-product, vendor/genesis/config/common_full_phone.mk)
+# Inherit some common Clover stuff.
+$(call inherit-product, vendor/clover/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := haydn
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2012K11G
-PRODUCT_NAME := genesis_haydn
+PRODUCT_NAME := clover_haydn
 
 PRODUCT_SYSTEM_NAME := haydn_global
 PRODUCT_SYSTEM_DEVICE := haydn
 
-#GenesisOS
-GENESIS_MAINTAINER := JARVIS
+#Clover Stuff
+WITH_GMS := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
