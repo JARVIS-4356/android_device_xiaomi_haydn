@@ -56,6 +56,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_handle64_invoke')
         .clear_symbol_version('remote_handle64_open')
         .clear_symbol_version('remote_register_buf_attr'),
+    'vendor/lib/libaudioroute_ext.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
+    'vendor/lib/hw/audio.primary.lahaina.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
 }
 
 module = ExtractUtilsModule(
